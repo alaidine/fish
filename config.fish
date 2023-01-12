@@ -30,6 +30,9 @@ set -gx PATH node_modules/.bin $PATH
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
+# doom emacs
+set -gx PATH ~/.emacs.d/bin $PATH
+
 # NVM
 function __check_rvm --on-variable PWD --description 'Do nvm stuff'
   status --is-command-substitution; and return
@@ -53,3 +56,9 @@ set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
+
+# cargo
+set -Ua fish_user_paths $HOME/.cargo/bin
+
+# starship prompt
+starship init fish | source
