@@ -30,6 +30,9 @@ set -gx PATH node_modules/.bin $PATH
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
+# bun
+set -gx PATH $HOME/.bun/bin $PATH
+
 # doom emacs
 set -gx PATH ~/.emacs.d/bin $PATH
 
