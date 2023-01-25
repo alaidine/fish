@@ -65,3 +65,5 @@ set -Ua fish_user_paths $HOME/.cargo/bin
 
 # starship prompt
 starship init fish | source
+
+bind \cl 'for i in (seq 1 $LINES); echo; end; clear; commandline -f repaint'
